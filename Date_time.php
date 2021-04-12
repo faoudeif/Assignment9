@@ -29,7 +29,7 @@ public function checkSubmit($datetime, $note) {
                     return 'There was an error adding the note';
                 }
                 else {
-                    $message .= "Name has been added";
+                    $message .= "Note has been added";
                 }
             
             
