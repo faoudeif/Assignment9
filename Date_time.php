@@ -7,9 +7,9 @@ class Date_time {
 // First function checkSubmit for addNote.php class to add notes    
 
 public function checkSubmit($datetime, $note) {
-    $message = "";
     if(isset($_POST["addnote"])) {
-        if(!isset($datetime) || !isset($note)) {
+        $message = "";
+        if(!$datetime || !$note) {
             $message .= "You must enter a date, time, and note";
         } else {
             $timestamp = strtotime($datetime);
@@ -31,10 +31,11 @@ public function checkSubmit($datetime, $note) {
                 else {
                     $message .= "Name has been added";
                 }
+            
+            
         }
-
+        return $message;
     }
-return $message;
 
 }
 
